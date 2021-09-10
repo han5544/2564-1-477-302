@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+        font-family: Arial;
+        background-image: linear-gradient(100deg, #FFA07A, #d35400);
+      }
+      
+      input[type=text], select {
+        width: 20%;
+        /* padding: 12px 20px;
+        margin: 8px 0;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box; */
+      }
+      
+      input[type=Submit] {
+        width: 20%;
+        background-color: #27ae60;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      
+      input[type=reset] {
+        width: 20%;
+        background-color: #e74c3c;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      ิ
+      input[type=reset]:hover {
+        background-color: #e74c3c;
+      }
+      
+      div.container {
+        width: 750px;
+        height: auto ;
+        border-radius: 5px;
+        background-image: linear-gradient(100deg,#bdc3c7 ,#ecf0f1);
+        padding: 20px;
+      }
+      div.index {
+        width: 150px;
+        height: 70px;
+        border-radius: 5px;
+        background-color: #bdc3c7;
+        padding: 20px;
+      }
+      
+      h4{
+        left: 1%;
+      }
+      </style>
+</head>
+<body onload="chkUsername()">      
+    <center>
+      <div class="index"> 
+          <h2>สมัครสมาชิก</h2>
+      </div> 
+      <br>
+      
+      <div class="container">
+        <form action="/action_page.php" id="my form">
+          <h3>ใบสมัครสมาชิก</h3>
+          
+          (กรอกข้อมูลส่วนตัวของท่าน)
+          <br>
+          <br>
+          <tr>
+            <td>คำนำหน้า</td>
+            <td>
+                นาย <input type="radio" name="Gender" id="Gender" value="Mr" />
+                นางสาว <input type="radio" name="Gender" id="Gender" value="Mrs" />
+            </td>
+          </tr>
+          <label for="lname">ชื่อ</label>
+          <input type="text" id="fname" name="=ชื่อ" placeholder="กรอกชื่อ...">
+          &nbsp;
+      
+          <label for="lname">นามสกุล</label>
+          <input type="text" id="lname" name="นามสกุล" placeholder="กรอกนามสกุล...">
+          <br>
+          <br>
+      
+          <label for="lname">ชื่อเล่น</label>
+          <input type="text" id="lname" name="ชื่อเล่น" placeholder="กรอกชื่อเล่น...">
+          &nbsp;
+      
+          <label for="lname">ตำเเหน่งที่สมัครงาน</label>
+          <input type="text" id="lname" name="ตำเเหน่งที่สมัครงาน" placeholder="กรอกตำเเหน่ง...">
+          &nbsp;
+      
+          <h4>Personal information (ประวัติส่วนตัว)</h4>
+          <a>วัน/เดือน/ปีเกิด: <label for="date"></label> <input type="date" name="วัน/เดือน/ปีเกิด"></a>
+          &nbsp;
+      
+          <label for="lname">อายุ</label>
+          <input type="text" id="lname" name="อายุ" placeholder="กรอกอายุ...">
+          &nbsp;
+      
+          <label for="lname">ส่วนสูง</label>
+          <input type="text" id="lname" name="ส่วนสูง" placeholder="กรอกส่วนสูง...">
+          <br>
+          <br>
+      
+          <label for="lname">น้ำหนัก</label>
+          <input type="text" id="lname" name="น้ำหนัก" placeholder="กรอกน้ำหนัก...">
+          &nbsp;
+      
+          <label for="lname">สัญชาติ</label>
+          <input type="text" id="lname" name="สัญชาติ" placeholder="กรอกสัญชาติ...">
+          &nbsp;
+      
+          <label for="lname">เชื้อชาติ</label>
+          <input type="text" id="lname" name="เชื้อชาติ" placeholder="กรอกเชื้อชาติ...">
+          <br>
+          <br>
+      
+          <label for="lname">ศาสนา</label>
+          <input type="text" id="lname" name="ศาสนา" placeholder="กรอกศาสนา...">
+          &nbsp;
+      
+          <label for="lname">เลขบัตรประจำตัวประชาชน</label>
+          <input type="text" id="lname" name="เลขบัตรประจำตัวประชาชน" placeholder="กรอกเลขบัตร...">
+          <br>
+          <br>
+      
+          <label for="lname">ที่อยู่</label>
+          <input type="text" id="lname" name="lastname" placeholder="กรอกที่อยู่...">
+          &nbsp;
+      
+          <label for="lname">โทรศัพท์</label>
+          <input type="text" id="lname" name="lastname" placeholder="กรอกโทรศัพท์...">
+          &nbsp;
+      
+          <label for="ภูมิภาค">ภูมิภาค</label>
+          <select id="ภูมิภาค" name="ภูมิภาค">
+            <option value="กลาง">ภาคกลาง</option>
+            <option value="เหนือ">ภาคเหลือ</option>
+            <option value="ตะวันออก">ภาคตะวันออกเฉียงเหลือ</option>
+            <option value="ใต้">ภาคใต้</option>
+          </select>
+          <br>
+          <br>
+          
+          <label for="สถานภาพ">สถานภาพ</label>
+          <select id="สถานภาพ" name="สถานะภาพ">
+            <option value="โสด">โสด</option>
+            <option value="เเต่งงาน">เเต่งงาน</option>
+            <option value="หม้าย">หม้าย</option>
+            <option value="เเยกกันอยู่">เเยกกันอยู่</option>
+          </select>
+          &nbsp;
+      
+          เเนบรูปถ่าย <input type="file" mark="1" style="width: 200px;" id="work_file" class="txt" name="work_file" >
+        <br>
+        </form>
+        <!-- โลเคชั่น -->
+        <br>
+        <button onclick="getLocation()">คลิกเพื่อหาตำแหน่ง</button>
+        <br>
+        <br>
+        <div id="mapholder"></div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoKoNVKdXRrp8YDgara5W1m2nfTU1dG5g&callback=initMap"
+  type="text/javascript"></script>
+        <script>
+        var x = document.getElementById("demo");
+        function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            latlon = new google.maps.LatLng(lat, lon)
+            mapholder = document.getElementById('mapholder')
+            mapholder.style.height = '350px';
+            mapholder.style.width = '500px';
+            var myOptions = {
+                center: latlon,
+                zoom:16,
+                mapTypeId:google.maps.MapTypeId.ROADMAP,
+                mapTypeControl:false,
+                navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+        }
+            var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+            var marker = new google.maps.Marker({position:latlon, map:map, title:"You are here!"});
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Location information is unavailable."
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "The request to get user location timed out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occurred."
+                    break;
+            }
+        }
+   </script>
+   <!-- เก็บข้อมูล -->
+   <br>
+   <div>
+    <dialog id="myFirstDialog">
+        <p><q>หากต้องการหลักฐานการสมัครกรุณากรอกเบอร์โทรศัพท์ : </q></p>
+        <div id="div1"></div>
+   <p><button onclick="saveUsername()" type="button">บันทึก</button>
+   <button onclick="delUsername()" type="button">ยกเลิก</button></p>
+   <br>
+   <form>
+       <input type="submit" value="เสร็จสิ้น">
+   </form>
+   <div id="result"></div>
+   <script>
+    function chkUsername() {
+        if(typeof(Storage) !== "undefined") {
+            if (localStorage.username) {
+                document.getElementById("div1").innerHTML = localStorage.username;
+            } else {
+                document.getElementById("div1").innerHTML = "<input type='text' placeholder='กรอกเบอร์โทรศัพท์' id='username'>";
+            }
+        } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+        }
+    }
+    function saveUsername() {
+        uname = document.getElementById("username");
+        localStorage.username = uname.value;
+        chkUsername();
+    }
+    function delUsername() {
+        localStorage.removeItem("username");
+        chkUsername();
+    }
+    </script>
+
+    </dialog>
+    <button id="show">หากท่านต้องการหลักฐานการสมัคร กรุณาคลิก</button>    
+</div>
+
+<script>
+    (function () {
+        var dialog = document.getElementById('myFirstDialog');
+        document.getElementById('show').onclick = function() {
+            dialog.showModal();
+        };
+        document.getElementById('hide').onclick = function() {
+            dialog.close();
+        };
+        document.getElementById('reveal').onclick = function() {
+            dialog.showModal();
+        };
+    })();
+</script>
+   <form>
+       <br>
+       <input type="submit" value="Submit">
+       <input type="reset" value="Cencel" onclick="reset()">
+   </form>
+   </center> 
+      <script>
+        function reset(){
+          document.getElementById("my form").reset()
+        }
+      </script>
+</body>
+</html>
